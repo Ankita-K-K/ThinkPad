@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "ThinkPad",
-  description: "Now get the task done in you notes using the help of AI",
+  description: "Now get the task done in your notes using the help of AI",
 };
 
 export default function RootLayout({
