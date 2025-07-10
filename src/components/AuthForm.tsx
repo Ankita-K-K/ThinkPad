@@ -24,12 +24,24 @@ const AuthForm = ({ type }: Props) => {
   return (
     <form action={handleSubmit}>
       <CardContent className="grid w-full items-center gap-4">
+        {!isLoginForm && (
+          <div className="flex flex-col space-y-1.5">
+            <Label htmlFor="full-name">Full Name</Label>
+            <Input
+              id="full-name"
+              name="full-name"
+              placeholder="Enter your Full Name"
+              type="text"
+              required
+            />
+          </div>
+        )}
         <div className="flex flex-col space-y-1.5">
           <Label htmlFor="email">Email</Label>
           <Input
             id="email"
             name="email"
-            placeholder="enter your email"
+            placeholder="Enter your email"
             type="email"
             required
             disabled={isPending}
@@ -40,7 +52,7 @@ const AuthForm = ({ type }: Props) => {
           <Input
             id="password"
             name="password"
-            placeholder="enter your password"
+            placeholder="Enter your password"
             type="password"
             required
             disabled={isPending}
