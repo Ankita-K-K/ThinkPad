@@ -4,9 +4,10 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./DarkModeToggle";
 import LogoutButton from "./LogoutButton";
+import { getUser } from "@/auth/server";
 
-const Header = () => {
-  const user = 1;
+async function Header() {
+  const user = await getUser();
   return (
     <header className="bg-popover relative flex h-24 w-full items-center justify-between px-3 shadow-xl sm:px-8">
       <Link href="/" aria-label="Go to homepage">
@@ -43,6 +44,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;
