@@ -38,7 +38,6 @@ const AuthForm = ({ type }: Props) => {
         title = "Signed Up";
         description = "Check your email for confirmation link";
       }
-
       if (!errorMessage) {
         toast.success(`${title}: ${description}`);
         router.replace("/");
