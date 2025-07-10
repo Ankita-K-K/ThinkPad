@@ -5,11 +5,13 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./DarkModeToggle";
 import LogoutButton from "./LogoutButton";
 import { getUser } from "@/auth/server";
+import { SidebarTrigger } from "./ui/sidebar";
 
 async function Header() {
   const user = await getUser();
   return (
     <header className="bg-popover relative flex h-24 w-full items-center justify-between px-3 shadow-xl sm:px-8">
+      <SidebarTrigger className="absolute top-1 left-1" />
       <Link href="/" aria-label="Go to homepage">
         <div className="flex items-end gap-2">
           <Image
